@@ -15,7 +15,7 @@
     CLGeocoder *geocoder = [[[CLGeocoder alloc] init] autorelease];
     
     if ([geocoder isGeocoding])
-        [geocoder cancelGeocode];
+        [geocoder cancelGeocode]; 
     
     
     [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
