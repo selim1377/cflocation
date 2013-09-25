@@ -6,8 +6,12 @@
 //  Copyright (c) 2013 Selim Bakdemir. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#ifndef CFAround_CFAround_h
+#define CFAround_CFAround_h
 
-@interface CFLocation : NSObject
+#import "Config.h"
+#import "CategoryDataLoader.h"
+#import "CFAroundGeocoder.h"
+#import "Locater.h"
 
-@end
+#endif
