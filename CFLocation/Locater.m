@@ -31,15 +31,34 @@ static Locater *instance = nil;
         self.manager.delegate = self;
         [self.manager startUpdatingLocation];
         
+        self.eventListeners = [[NSMutableArray new] autorelease];
+        
     }
     
     return self;
+}
+
+-(void)addOnLocationChangeListener:(id)listener
+{
+    [self.eventListeners addObject:listener];
 }
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
     
     self.userLocation = newLocation;
+    
+    
+    
+    if(self.eventListeners.count > 0)
+    {
+        for (id<LocaterDelegate> listener in self.eventListeners) {
+            
+            if ([listener respondsToSelector:@selector(didUpdateToLocation:)]) {
+                [listener performSelector:@selector(didUpdateToLocation:) withObject:newLocation];
+            }
+        }
+    }
 }
 
 -(void)dealloc

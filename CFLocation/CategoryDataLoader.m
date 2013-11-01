@@ -78,7 +78,8 @@
     NSString * response = [[[NSString alloc] initWithData:_received encoding:NSUTF8StringEncoding] autorelease];
 
     NSString * js = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"jsonfix" ofType:@"txt"] encoding:NSUTF8StringEncoding error:&error];
-        
+
+    
     NSString * stringWithJs = [js stringByAppendingString:response];
     
     self.proxyView = [[[UIWebView alloc] init] autorelease];
@@ -91,9 +92,7 @@
 #pragma mark - UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    //NSLog(@"webview finished loading");
     NSString * json = [webView stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"];
-    //NSLog(@"json data %@",json);
     if ([_delegate respondsToSelector:@selector(dataHasBeenLoaded:)])
     {
        // NSLog(@"notifying delegate of data");
