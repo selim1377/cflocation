@@ -73,6 +73,8 @@
 		8F9C97E617E9D4EF00D6653E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8F9C98EF17E9E5BD00D6653E /* Locater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Locater.h; path = CFLocation/Locater.h; sourceTree = SOURCE_ROOT; };
 		8F9C98F017E9E5BD00D6653E /* Locater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Locater.m; path = CFLocation/Locater.m; sourceTree = SOURCE_ROOT; };
+		8FB7558D1828F179001A9156 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		8FB755911828F179001A9156 /* CFLocation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CFLocation-Info.plist"; path = "../CFlocation/CFLocation-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				8F9C97DF17E9D43800D6653E /* CoreGraphics.framework */,
 				8F9C97DD17E9D43400D6653E /* CoreLocation.framework */,
 				8F9C979217E98A1B00D6653E /* Foundation.framework */,
+				8FB7558D1828F179001A9156 /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -141,9 +144,9 @@
 		8F9C97BC17E9D39A00D6653E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				8FB7559B1828F1F1001A9156 /* Resources */,
 				8F9C97BF17E9D3B100D6653E /* GpsLocation */,
 				8F9C97C017E9D3C100D6653E /* MapSearch */,
-				8F9C97B417E9D39200D6653E /* jsonfix.txt */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -179,6 +182,15 @@
 				8F9C97B117E9D39200D6653E /* CategoryDataLoader.h */,
 			);
 			name = MapSearch;
+			sourceTree = "<group>";
+		};
+		8FB7559B1828F1F1001A9156 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8FB755911828F179001A9156 /* CFLocation-Info.plist */,
+				8F9C97B417E9D39200D6653E /* jsonfix.txt */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

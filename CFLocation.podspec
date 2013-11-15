@@ -16,9 +16,10 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '5.0'
   s.source       = { 
       :git => "https://github.com/selim1377/cflocation.git", 
-      :tag => "v1.0" 
+      :tag => "0.0.1" 
   }
-  s.source_files  =  'CFLocation/*.{h,m,a,txt}'
+  s.source_files  =  'CFLocation/*.{h,m}'
+  s.resources      = "CFLocation/jsonfix.txt"
   s.framework    = 'CoreLocation'
   s.dependency     'SBJson'
 end

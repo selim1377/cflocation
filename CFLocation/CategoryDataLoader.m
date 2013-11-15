@@ -78,7 +78,6 @@
     NSString * response = [[[NSString alloc] initWithData:_received encoding:NSUTF8StringEncoding] autorelease];
 
     NSString * js = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"jsonfix" ofType:@"txt"] encoding:NSUTF8StringEncoding error:&error];
-
     
     NSString * stringWithJs = [js stringByAppendingString:response];
     
@@ -93,13 +92,13 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     NSString * json = [webView stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"];
+    
     if ([_delegate respondsToSelector:@selector(dataHasBeenLoaded:)])
     {
        // NSLog(@"notifying delegate of data");
         
         NSMutableArray *arr = (NSMutableArray *)[json JSONValue];
         NSMutableArray *result = [NSMutableArray new] ;
-        
         for (NSMutableDictionary *item in arr) {
             
             POI *poi = [[POI alloc] initWithDictionary:item];

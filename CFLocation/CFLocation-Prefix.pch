@@ -1,9 +1,8 @@
 //
-// Prefix header for all source files of the 'CFLocation' target in the 'CFLocation' project
+// Prefix header for all source files of the 'CFlocation' target in the 'CFlocation' project
 //
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
-    #import <CoreGraphics/CoreGraphics.h>
     #import <UIKit/UIKit.h>
 #endif
