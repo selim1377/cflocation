@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
       :tag => "0.0.1" 
   }
   s.source_files  =  'CFLocation/*.{h,m}'
-  s.resources      = "CFLocation/jsonfix.txt"
+  s.resource      = "CFLocation/jsonfix.txt" 
   s.framework    = 'CoreLocation'
-  s.dependency     'SBJson'
+  s.dependency     'SBJson'  
 end

@@ -19,6 +19,9 @@
 
 @interface CategoryDataLoader : NSObject <UIWebViewDelegate>
 {
+    //Cocoapod Test
+    // Git test
+    
     NSMutableData * received;
     id <CategoryDataLoaderDelegate> delegate;
     UIWebView * proxyView;
