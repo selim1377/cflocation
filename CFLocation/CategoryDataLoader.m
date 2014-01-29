@@ -44,7 +44,6 @@
     NSString *urlString = [NSString stringWithFormat:[[cfg configData] objectForKey:@"poiRequestURL"],searchTerm,start,userPos,@"0.10000,0.10000",[cfg.uiLanguage lowercaseString]];
     urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
-    NSLog(@"%@",urlString);
     
     NSURL * url = [NSURL URLWithString:urlString];
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url];
