@@ -15,7 +15,7 @@
 @synthesize received = _received;
 @synthesize delegate = _delegate;
 @synthesize proxyView = _proxyView;
-@synthesize theConnection = _theConnection;
+@synthesize theConnection = _theConnection; 
 
 - (id) init
 {
